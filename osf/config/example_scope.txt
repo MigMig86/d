@@ -1,0 +1,7 @@
+# Explicit authorized test scope — one address or CIDR per line.
+# Only targets that match a rule here will be touched by any part of
+# the framework. Keep this file under change control for real engagements.
+#
+# Example lab target:
+# 192.168.56.101
+# 192.168.56.0/24

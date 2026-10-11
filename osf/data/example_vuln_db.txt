@@ -1,0 +1,13 @@
+# Example attack-surface correlation database.
+# Format: service|version_substring|identifier|severity|description|remediation
+# - service: substring matched against nmap's detected service name
+# - version_substring: substring matched against nmap's detected version
+#   string (leave empty to match any version of that service)
+#
+# This is illustrative sample data for a lab target, not a real feed.
+# Replace with your own curated entries, or generate this file from
+# NVD/OSV/vendor advisories for the software you're actually assessing.
+
+ftp|vsftpd 2.3.4|EXAMPLE-FTP-001|CRITICAL|Illustrative placeholder entry for an old vsftpd build often used in training labs.|Upgrade to a current, supported FTP server build.
+http|Apache/2.2|EXAMPLE-HTTP-001|MEDIUM|Illustrative placeholder entry flagging an old Apache 2.2 branch (EOL).|Upgrade to a maintained Apache/nginx release and re-check TLS configuration.
+ssh||EXAMPLE-SSH-001|INFO|SSH service detected; confirm key exchange / cipher policy meets current baseline.|Review sshd_config against current hardening guidance (disable weak KEX/ciphers, enforce key auth).
